@@ -19,7 +19,8 @@ export class TeamDAO {
     public increaseStepById = (id: TeamProps["id"]): number => {
         const team = (global as any).TEAMS[id];
         if(typeof team === "undefined") return 0;
-        return team.steps++;
+        team.steps++;
+        return team.steps;
     }
 
 }

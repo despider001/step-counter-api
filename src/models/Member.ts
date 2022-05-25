@@ -1,3 +1,29 @@
+/**
+ * @swagger
+ * definitions:
+ *   Member:
+ *     type: object
+ *     required:
+ *       - id
+ *       - name
+ *       - steps
+ *       - team_id
+ *     properties:
+ *       id:
+ *         type: number
+ *       name:
+ *         type: string
+ *       steps:
+ *         type: number
+ *       team_id:
+ *         type: number
+ *   
+ *   Members:
+ *     type: array
+ *     items:
+ *       $ref: '#/definitions/Member'
+ */
+
 export type MemberProps = {
     id: number
     name: string
@@ -18,32 +44,3 @@ export class Member {
         this.team_id = props.team_id;
     }
 }
-
-/*
-
-const TEAMS = [
-    {
-        id: 0,
-        name: 'red team'
-    },
-    {
-        id: 1,
-        name: 'green team'
-    }
-]
-
-const MEMBERS = [
-    {
-        id: 0,
-        name: 'sam',
-        steps: 0,
-        team_id: 0
-    },
-    {
-        id: 1,
-        name: 'john',
-        steps: 5,
-        team_id: 1
-    },
-]
-*/

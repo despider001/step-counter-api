@@ -1,15 +1,14 @@
 import { Member, MemberProps } from "../models/member";
 import { TeamProps } from "../models/team";
-import { isObjEmpty } from "../utils/is-obj-empty";
 import { TeamDAO } from "./Team";
+import _ from "lodash";
 
 export class MemberDAO {
     private teamDAO =  new TeamDAO();
 
     public addOne = (name: MemberProps["name"], team_id: MemberProps["team_id"]): null | Member => {
         const team = this.teamDAO.findById(team_id);
-
-        if(isObjEmpty(team)) {
+        if(_.isEmpty(team)) {
             return null;
         }
         const length = (global as any).MEMBERS.length;
