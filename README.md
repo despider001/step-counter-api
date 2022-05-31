@@ -60,7 +60,7 @@ But in this API, to retrieve a member, you need to know the teams id too.
 * ### **Comment thoroughly**
 Comments are missing in the code
 
-* ### **WImplement logging**
+* ### **Implement logging**
 Logging is not implemented
 
 * ### **Proper error handling**
